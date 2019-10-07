@@ -22,3 +22,74 @@ body,html {
         padding-top: 15px;
     }
 }
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+form {
+     padding-top: 30px;
+}
+
+.form-container {
+    display: flex;
+    padding: 15px 50px;
+    border: 1px solid  rgb(209, 209, 209);
+    border-radius: 30px;
+    flex-direction: column;
+    padding: 15px 25px;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-family: Segoe UI;
+        font-size: 15px;
+        color: #707070;
+        padding-bottom: 5px;
+    }
+
+    input {
+        padding: 12px ;
+        margin: 5px 0px 3px 0;
+        border: solid 0.5px rgb(209, 209, 209);
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    textarea {
+        padding: 8px ;
+        margin: 5px 0px 3px 0;
+        font-size: 13.3333px;
+        font-family: Arial;
+        color: #707070;
+        border-radius: 10px;
+        border: solid 0.5px rgb(209, 209, 209);
+    }
+
+    .adding-choice {
+        display: inline;
+        padding-bottom: 25px;
+        
+            span {
+                font-size: 10px;
+                font-family: Arial;
+                color: #686767;
+            }
+            
+            #index-input {
+                border-radius: none;
+                width: 70px;
+                height: 30px;
+            }
+    }
+
+    .save-btn {
+        background-color: #2D89E6;
+        padding-top: 10px;
+        margin: 0;
+    }
+}
+.member-list-container {
+    background-color: #F6F6F6;
+}

@@ -28,4 +28,88 @@ body, html {
           justify-content: center;
   padding-top: 15px;
 }
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+form {
+  padding-top: 30px;
+}
+
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 50px;
+  border: 1px solid #d1d1d1;
+  border-radius: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px 25px;
+}
+
+.form-container h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Segoe UI;
+  font-size: 15px;
+  color: #707070;
+  padding-bottom: 5px;
+}
+
+.form-container input {
+  padding: 12px;
+  margin: 5px 0px 3px 0;
+  border: solid 0.5px #d1d1d1;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.form-container textarea {
+  padding: 8px;
+  margin: 5px 0px 3px 0;
+  font-size: 13.3333px;
+  font-family: Arial;
+  color: #707070;
+  border-radius: 10px;
+  border: solid 0.5px #d1d1d1;
+}
+
+.form-container .adding-choice {
+  display: inline;
+  padding-bottom: 25px;
+}
+
+.form-container .adding-choice span {
+  font-size: 10px;
+  font-family: Arial;
+  color: #686767;
+}
+
+.form-container .adding-choice #index-input {
+  border-radius: none;
+  width: 70px;
+  height: 30px;
+}
+
+.form-container .save-btn {
+  background-color: #2D89E6;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.member-list-container {
+  background-color: #F6F6F6;
+}
 /*# sourceMappingURL=index.css.map */
