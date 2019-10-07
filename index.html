@@ -17,9 +17,11 @@
                     <input type="text" placeholder="Email" name="email" required>
                     <input type="text" placeholder="Major" name="major" required>
                     <input type="text" placeholder="Role" name="role" required>
-                    <input type="text" placeholder="Biography" name="bio" required>
-                    <input type="checkbox" name="add-to-bottom" value="bottom"> Add to bottom / or at index
-                    <input type="text" name="add-at-index">
+                    <textarea rows="10" cols="35" minlength="500" maxlength="1500">Biography</textarea>
+                    <div class="adding-choice">
+                        <input type="checkbox" name="add-to-bottom" value="bottom"><span>Add to bottom / or at indexs
+                        <input type="text" id="index-input" name="add-at-index">
+                    </div>
                     <button type="submit" class="save-btn">Save</button>
                 </div>
             </form>
