@@ -9,7 +9,39 @@
                 <h1>PSEU Team Members</h1>
             </div>
         </div>
-        <div class="main-contents">
+        <div class="main-content">
+            <form>
+                <div class="form-container">
+                    <h1>Add new member</h1>
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="text" placeholder="Email" name="email" required>
+                    <input type="text" placeholder="Major" name="major" required>
+                    <input type="text" placeholder="Role" name="role" required>
+                    <textarea rows="15" cols="35" minlength="500" maxlength="1500">Biography</textarea>
+                    <div class="adding-choice">
+                        <input type="checkbox" name="add-to-bottom" value="bottom"><span>Add to bottom / or at indexs</span>
+                        <input type="text" id="index-input" name="add-at-index">
+                    </div>
+                     <button type="submit" class="save-btn"><b>SAVE</b></button>
+                </div>
+            </form>
+            <div class="member-list-container">
+                <div class="bar">
+                    <div class="filter-bar"> 
+                        <ul>
+                            <li>SORT BY</li>
+                            <li><input type="text" placeholder="A-Z" name="sort-by-alphabit"></li>
+                            <div class="2nd-fliter-bar-element">
+                                <li><input type="text" placeholder="Major" name="sort-by-major"></li>
+                                <li><input type="text" placeholder="Role" name="sort-by-role"></li>
+                            </div>
+                            <li><input type="text" placeholder="Search by name ..   " name="search-by-name"></li>
+                        </ul>
+                    </div>
+                    <div class="item-counter"></div>
+                </div>
+                <div class="list"></div>
+            </div>
         </div>
     </body>
 </html>

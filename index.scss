@@ -22,3 +22,93 @@ body,html {
         padding-top: 15px;
     }
 }
+
+.main-content {
+    display: flex;
+    justify-content: space-evenly;
+    height: 92%;
+}
+
+form {
+     padding-top: 30px;
+}
+
+.form-container {
+    display: flex;
+    padding-top: 15px ;
+    border: 1px solid  rgb(209, 209, 209);
+    border-radius: 30px;
+    flex-direction: column;
+    padding-bottom: 0px;
+    width: 120%;
+    height: 70%;
+    
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-family: Segoe UI;
+        font-size: 15px;
+        color: #707070;
+        padding-bottom: 15px;
+    }
+
+    input {
+        padding: 15px ;
+        margin: 5px 15px 3px 15px;
+        border: solid 0.5px #C3C3C3;
+        border-radius: 8px;
+        background-color: #fff;
+        
+    }
+    
+    input::placeholder {
+        color:#C3C3C3; 
+    }
+
+    textarea {
+        padding: 8px ;
+        margin: 5px 15px 3px 15px;
+        font-size: 13.3333px;
+        font-family: Arial;
+        color: #C3C3C3;
+        border-radius: 10px;
+        border: solid 0.5px #C3C3C3;
+        
+    }
+
+    .adding-choice {
+        display: inline;
+        margin-bottom: 20px;
+        
+            span {
+                font-size: 10px;
+                font-family: Arial;
+                color: #686767;
+                
+            }
+            
+            #index-input {
+                border-radius: 0px;
+                width: 43px;
+                height: 2px;
+                padding: 9px;
+            }
+    }
+
+.save-btn {
+    background-color: #2D89E6;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 15px;
+    font-family: Segoe UI;
+    font-size: 15px;
+    color: white;
+    }
+
+}
+.member-list-container {
+    background-color: #F6F6F6;
+    width: 70%;
+    padding-bottom: 30px; 
+}
