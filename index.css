@@ -139,4 +139,63 @@ form {
   width: 70%;
   padding-bottom: 30px;
 }
+
+.member-list-container .bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  height: 70px;
+  padding-top: 30px;
+  font-family: Segoe UI;
+}
+
+.member-list-container .bar .filter-bar {
+  background-color: #2D89E6;
+  padding-left: 80px;
+  padding-right: 90px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.member-list-container .bar .filter-bar li {
+  display: inline-block;
+  padding-top: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+.member-list-container .bar .filter-bar li input {
+  border: solid 0.5px #C3C3C3;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.member-list-container .bar .filter-bar li #sort-by-alphabit {
+  width: 40px;
+}
+
+.member-list-container .bar .filter-bar li #sort-by-major {
+  width: 70px;
+}
+
+.member-list-container .bar .filter-bar li #sort-by-role {
+  width: 70px;
+}
+
+.member-list-container .bar .filter-bar li #search-by-name {
+  width: 180px;
+}
+
+.member-list-container .bar .item-counter {
+  background-color: #2D89E6;
+  padding-right: 90px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
 /*# sourceMappingURL=index.css.map */

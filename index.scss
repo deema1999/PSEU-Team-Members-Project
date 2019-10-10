@@ -1,3 +1,5 @@
+$light-gray: #C3C3C3;
+
 * {
     margin: 0;
     border: 0;
@@ -63,7 +65,7 @@ form {
     }
     
     input::placeholder {
-        color:#C3C3C3; 
+        color: $light-gray; 
     }
 
     textarea {
@@ -111,4 +113,60 @@ form {
     background-color: #F6F6F6;
     width: 70%;
     padding-bottom: 30px; 
+    .bar {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        height: 70px;
+        padding-top: 30px;
+        font-family: Segoe UI;
+        
+        .filter-bar {
+            background-color: #2D89E6;
+            padding-left: 80px;
+            padding-right: 90px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+             li {
+                display: inline-block;
+                padding-top: 10px;
+                //padding-right:5px;
+                margin-right: 10px;
+                color: white;
+                
+                input {
+                    border: solid 0.5px #C3C3C3;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                   
+                }
+                 #sort-by-alphabit {
+                    width: 40px;
+                       
+                }
+                #sort-by-major {
+                    width: 70px;
+                   
+                }
+                #sort-by-role {
+                    width: 70px;
+                }
+                #search-by-name {
+                    width: 180px;
+                }
+                
+                
+                }
+            }
+           
+        .item-counter {
+            background-color: #2D89E6;
+            padding-right: 90px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+    }
 }
