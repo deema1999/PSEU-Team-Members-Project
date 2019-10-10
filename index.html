@@ -40,20 +40,46 @@
                 </div>
             </form>
             <div class="member-list-container">
-                <div class="bar">
+                <nav class="bar">
                     <div class="filter-bar"> 
                         <ul>
-                            <li>SORT BY</li>
-                            <li><input type="text" placeholder="A-Z" name="sort-by-alphabit"></li>
-                            <div class="2nd-fliter-bar-element">
-                                <li><input type="text" placeholder="Major" name="sort-by-major"></li>
-                                <li><input type="text" placeholder="Role" name="sort-by-role"></li>
-                            </div>
-                            <li><input type="text" placeholder="Search by name ..   " name="search-by-name"></li>
+                            <li id="sort-by">SORT BY</li>
+                            <li>
+                                <input id="sort-by-alphabit" list="sort-by-alphabit" type="text" placeholder="A-Z" name="sort-by-alphabit">
+                                <datalist id="sort-by-alphabit">
+                                    <option value="A-Z">A-Z</option>
+                                    <option value="Z-A">Z-A</option>
+                                    <option value="Newest">Newest</option>
+                                    <option value="Oldest">Oldest</option>
+                                 </datalist>
+                            </li>
+                            <li id="splitter">|</li>
+                            <li>
+                                <input id="sort-by-major" list="sort-by-major" type="text" placeholder="Major" name="sort-by-major">
+                                <datalist id="sort-by-major">
+                                    <option value="Computer Science">Computer Science</option>
+                                    <option value="Computer Engineering">Computer Engineering</option>
+                                    <option value="Information Technology">Information Technology</option>
+                                    <option value="Information System">Information System</option>
+                                </datalist>
+                            </li>
+                            <li>
+                                <input id="sort-by-role" list="sort-by-role" type="text" placeholder="Role" name="sort-by-role">
+                                <datalist id="sort-by-role">
+                                    <option value="Front-End Developer">Front-End Developer</option>
+                                    <option value="Back-End Developer">Back-End Developer</option>
+                                    <option value="Full-Stack Developer">Full-Stack Developer</option>
+                                    <option value="UI/UX Designer">UI/UX Designer</option>
+                            </datalist>
+                            </li>
+                            <li id="splitter">|</li>
+                            <li><input id="search-by-name" type="text" placeholder="Search by name ..   " name="search-by-name"></li>
                         </ul>
                     </div>
-                    <div class="item-counter"></div>
-                </div>
+                    <div class="item-counter">
+                       
+                    </div>
+                </nav>
                 <div class="list"></div>
             </div>
         </div>
