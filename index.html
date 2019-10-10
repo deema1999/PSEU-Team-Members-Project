@@ -15,8 +15,22 @@
                     <h1>Add new member</h1>
                     <input type="text" placeholder="Name" name="name" required>
                     <input type="text" placeholder="Email" name="email" required>
-                    <input type="text" placeholder="Major" name="major" required>
-                    <input type="text" placeholder="Role" name="role" required>
+                    <input list="major-list"  placeholder="Major" required>
+                    <datalist id="major-list">
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Information System">Information System</option>
+                    </datalist>
+                    </input>
+                    <input list="role-list"  placeholder="Role" required>
+                    <datalist id="role-list">
+                        <option value="Front-End Developer">Front-End Developer</option>
+                        <option value="Back-End Developer">Back-End Developer</option>
+                        <option value="Full-Stack Developer">Full-Stack Developer</option>
+                        <option value="UI/UX Designer">UI/UX Designer</option>
+                    </datalist>
+                    </input>
                     <textarea rows="15" cols="35" minlength="500" maxlength="1500">Biography</textarea>
                     <div class="adding-choice">
                         <input type="checkbox" name="add-to-bottom" value="bottom"><span>Add to bottom / or at indexs</span>
