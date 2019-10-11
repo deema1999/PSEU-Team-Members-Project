@@ -78,9 +78,6 @@ form {
     textarea {
         padding: 8px ;
         margin: 5px 15px 3px 15px;
-        //font-size: 13.3333px;
-        ///font-family: Arial;
-        //color: $light-gray;
         border-radius: 10px;
         border: solid 0.5px $light-gray;
         
@@ -121,6 +118,7 @@ form {
     width: 70%;
     padding-bottom: 30px; 
     overflow: scroll;
+
     .bar {
         display: flex;
         justify-content: space-between;
@@ -176,5 +174,18 @@ form {
             border-bottom-left-radius: 20px;
         }
        
+    }
+    .info-popup {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        right: 15px;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+    }
+    .form {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
     }
 }

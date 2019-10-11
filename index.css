@@ -203,4 +203,19 @@ form {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
+
+.member-list-container .info-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.member-list-container .form {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
 /*# sourceMappingURL=index.css.map */

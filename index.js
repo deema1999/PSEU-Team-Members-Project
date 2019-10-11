@@ -1,5 +1,4 @@
 let members=[];  
-let chechBtn;
 
 function member(name,email,major,role,bio) {
     this.name = name;
@@ -7,10 +6,9 @@ function member(name,email,major,role,bio) {
     this.major = major;
     this.role = role;
     this.bio = bio;
- }
+}
 
-
- function addMember(){
+function addMember(){
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
     let major = document.getElementById("major-list");
@@ -22,9 +20,13 @@ function member(name,email,major,role,bio) {
     let student = new member(name,email,stdMajor,stdRole,bio);
 
     members.unshift(student);
-    
- }
- 
+}
+
+function saveFunction() {
+    addMember();
+    let jsonMembers = JSON.stringify(members);
+    localStorage.setItem('members-array', jsonMembers)
+} 
 
  
 
