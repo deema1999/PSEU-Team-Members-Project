@@ -4,6 +4,7 @@
         <link href="index.css" type="text/css" rel="stylesheet">
     </head>
     <body>
+        <script src="index.js"></script>
         <div class="header-container">
             <div class="header">
                 <h1>PSEU Team Members</h1>
@@ -13,30 +14,32 @@
             <form>
                 <div class="form-container">
                     <h1>Add new member</h1>
-                    <input type="text" placeholder="Name" name="name" required>
-                    <input type="text" placeholder="Email" name="email" required>
-                    <input list="major-list"  placeholder="Major" required>
-                    <datalist id="major-list">
+                    <input type="text" placeholder="Name" id="name" required>
+                    <input type="text" placeholder="Email" id="email" required>
+                    <!-- <input id="major-input "list="major-list"  placeholder="Major" required>-->
+                    <select id="major-list">
+                        <option id="option1" value="Major">Major</option>
                         <option value="Computer Science">Computer Science</option>
                         <option value="Computer Engineering">Computer Engineering</option>
                         <option value="Information Technology">Information Technology</option>
                         <option value="Information System">Information System</option>
-                    </datalist>
-                    </input>
-                    <input list="role-list"  placeholder="Role" required>
-                    <datalist id="role-list">
+                    </select>
+                    <!--</input>
+                    <input list="role-list"  placeholder="Role" required>-->
+                    <select id="role-list">
+                        <option value="Role">Role</option>
                         <option value="Front-End Developer">Front-End Developer</option>
                         <option value="Back-End Developer">Back-End Developer</option>
                         <option value="Full-Stack Developer">Full-Stack Developer</option>
                         <option value="UI/UX Designer">UI/UX Designer</option>
-                    </datalist>
-                    </input>
-                    <textarea rows="15" cols="35" minlength="500" maxlength="1500">Biography</textarea>
+                    </select>
+                    <!--</input>-->
+                    <textarea  placeholder="Biography" id="bio" rows="15" cols="35" minlength="500" maxlength="1500"></textarea>
                     <div class="adding-choice">
-                        <input type="checkbox" name="add-to-bottom" value="bottom"><span>Add to bottom / or at indexs</span>
+                        <input type="checkbox" id="add-bottom" name="add-to-bottom" value="bottom" onclick="order()"><span>Add to bottom / or at indexs</span>
                         <input type="text" id="index-input" name="add-at-index">
                     </div>
-                     <button type="submit" class="save-btn"><b>SAVE</b></button>
+                     <button type="submit" class="save-btn" onclick="saveFunction()"><b>SAVE</b></button>
                 </div>
             </form>
             <div class="member-list-container">
@@ -45,42 +48,42 @@
                         <ul>
                             <li id="sort-by">SORT BY</li>
                             <li>
-                                <input id="sort-by-alphabit" list="sort-by-alphabit" type="text" placeholder="A-Z" name="sort-by-alphabit">
-                                <datalist id="sort-by-alphabit">
+                                <!--<input id="sort-alphabit" list="sort-by-alphabit" type="text" placeholder="A-Z" name="sort-by-alphabit">-->
+                                <select id="sort-by-alphabit">
                                     <option value="A-Z">A-Z</option>
                                     <option value="Z-A">Z-A</option>
                                     <option value="Newest">Newest</option>
                                     <option value="Oldest">Oldest</option>
-                                 </datalist>
+                                </select>
                             </li>
                             <li id="splitter">|</li>
                             <li>
-                                <input id="sort-by-major" list="sort-by-major" type="text" placeholder="Major" name="sort-by-major">
-                                <datalist id="sort-by-major">
+                                <!--<input id="sort-major" list="sort-by-major" type="text" placeholder="Major" name="sort-by-major">-->
+                                <select id="sort-by-major">
+                                    <option value="Major">Major</option>
                                     <option value="Computer Science">Computer Science</option>
                                     <option value="Computer Engineering">Computer Engineering</option>
                                     <option value="Information Technology">Information Technology</option>
                                     <option value="Information System">Information System</option>
-                                </datalist>
+                                </select>
                             </li>
                             <li>
-                                <input id="sort-by-role" list="sort-by-role" type="text" placeholder="Role" name="sort-by-role">
-                                <datalist id="sort-by-role">
+                                <!--<input id="sort-role" list="sort-by-role" type="text" placeholder="Role" name="sort-by-role">-->
+                                <select id="sort-by-role">
+                                    <option value="Role">Role</option>
                                     <option value="Front-End Developer">Front-End Developer</option>
                                     <option value="Back-End Developer">Back-End Developer</option>
                                     <option value="Full-Stack Developer">Full-Stack Developer</option>
                                     <option value="UI/UX Designer">UI/UX Designer</option>
-                            </datalist>
+                                </select>
                             </li>
                             <li id="splitter">|</li>
-                            <li><input id="search-by-name" type="text" placeholder="Search by name ..   " name="search-by-name"></li>
+                            <li><input id="search-name" type="text" placeholder="Search by name ..   " name="search-by-name"></li>
                         </ul>
                     </div>
-                    <div class="item-counter">
-                       
-                    </div>
+                    <div class="item-counter"></div>
                 </nav>
-                <div class="list"></div>
+                <div id="list" class="list"></div>
             </div>
         </div>
     </body>
