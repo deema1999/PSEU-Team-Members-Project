@@ -28,7 +28,16 @@ function addMember(){
 
     let student = new member(name,email,stdMajor,stdRole,bio);
 
-    members.unshift(student);
+    if(chechBtn == 0){
+        members.push(student);
+    }
+    let index = document.getElementById('index-input').value;
+    if(index != null){
+        members.splice(index, 0, student);
+    }
+    else {
+        members.unshift(student);
+    }
 }
 
 function saveFunction() {
