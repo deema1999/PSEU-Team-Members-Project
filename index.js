@@ -8,6 +8,13 @@ function member(name,email,major,role,bio) {
     this.bio = bio;
 }
 
+window.onload = function () {
+    if (localStorage.getItem("members-array") != null) {
+        let mem = localStorage.getItem("members-array");
+        members = JSON.parse(mem);
+        showMemberList();
+}
+
 function addMember(){
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
