@@ -1,4 +1,5 @@
 let members=[];  
+let chechBtn;
 
 function member(name,email,major,role,bio) {
     this.name = name;
@@ -13,6 +14,7 @@ window.onload = function () {
         let mem = localStorage.getItem("members-array");
         members = JSON.parse(mem);
         showMemberList();
+    }
 }
 
 function addMember(){
@@ -83,6 +85,16 @@ function showMemberList(){
     
     list.appendChild(sec);
   })
+}
+
+//chech adding member to botom option
+function checkAddOption()
+{
+   if (document.getElementById('add-bottom').checked) 
+   {
+       chechBtn = 0;
+   }
+   
 }
 
 
