@@ -16,24 +16,20 @@
                     <h1>Add new member</h1>
                     <input type="text" placeholder="Name" id="name" required>
                     <input type="text" placeholder="Email" id="email" required>
-                    <!-- <input id="major-input "list="major-list"  placeholder="Major" required>-->
                     <select id="major-list">
-                        <option id="option1" value="Major">Major</option>
+                        <option value="Major" selected disabled value=" ">Major</option>
                         <option value="Computer Science">Computer Science</option>
                         <option value="Computer Engineering">Computer Engineering</option>
                         <option value="Information Technology">Information Technology</option>
                         <option value="Information System">Information System</option>
                     </select>
-                    <!--</input>
-                    <input list="role-list"  placeholder="Role" required>-->
                     <select id="role-list">
-                        <option value="Role">Role</option>
+                        <option value="Role" selected disabled value=" ">Role</option>
                         <option value="Front-End Developer">Front-End Developer</option>
                         <option value="Back-End Developer">Back-End Developer</option>
                         <option value="Full-Stack Developer">Full-Stack Developer</option>
                         <option value="UI/UX Designer">UI/UX Designer</option>
                     </select>
-                    <!--</input>-->
                     <textarea  placeholder="Biography" id="bio" rows="15" cols="35" minlength="500" maxlength="1500"></textarea>
                     <div class="adding-choice">
                         <input type="checkbox" id="add-bottom" name="add-to-bottom" value="bottom" onclick="checkAddOption()"><span>Add to bottom / or at indexs</span>
@@ -48,8 +44,8 @@
                         <ul>
                             <li id="sort-by">SORT BY</li>
                             <li>
-                                <!--<input id="sort-alphabit" list="sort-by-alphabit" type="text" placeholder="A-Z" name="sort-by-alphabit">-->
-                                <select id="sort-by-alphabit">
+                                <select id="sort-by-alphabit" onclick="sortByAlpha()">
+                                    <option value="A-Z" selected disabled value=" ">A-Z</option>
                                     <option value="A-Z">A-Z</option>
                                     <option value="Z-A">Z-A</option>
                                     <option value="Newest">Newest</option>
@@ -58,9 +54,8 @@
                             </li>
                             <li id="splitter">|</li>
                             <li>
-                                <!--<input id="sort-major" list="sort-by-major" type="text" placeholder="Major" name="sort-by-major">-->
-                                <select id="sort-by-major">
-                                    <option value="Major">Major</option>
+                                <select id="filter-by-major" onclick="filter()">
+                                    <option value="Major" selected disabled value=" ">Major</option>
                                     <option value="Computer Science">Computer Science</option>
                                     <option value="Computer Engineering">Computer Engineering</option>
                                     <option value="Information Technology">Information Technology</option>
@@ -68,9 +63,8 @@
                                 </select>
                             </li>
                             <li>
-                                <!--<input id="sort-role" list="sort-by-role" type="text" placeholder="Role" name="sort-by-role">-->
-                                <select id="sort-by-role">
-                                    <option value="Role">Role</option>
+                                <select id="filter-by-role" onclick="filter()">
+                                    <option value="Role" selected disabled value=" ">Role</option>
                                     <option value="Front-End Developer">Front-End Developer</option>
                                     <option value="Back-End Developer">Back-End Developer</option>
                                     <option value="Full-Stack Developer">Full-Stack Developer</option>
@@ -86,17 +80,17 @@
                 <div id="list" class="list"></div>
             </div>
         </div>
-        <div class="info-popup" id="popup"> 
+        <!--<div class="info-popup" id="popup"> 
             <form class="form">
-                <h1></h1>
-                <p id="pp"></p>
-                <p id="bioP"></p>
+                <h1>#</h1>
+                <p id="pp">##</p>
+                <p id="bioP">#####</p>
                 <div class="btns"> 
                     <button id="del-btn">DELETE</button>
                     <button id="save-btn">SAVE</button>
                     <button id="cancel-btn">CANSEL</button>
                 </div>
             </form>
-        </div>
+        </div>-->
     </body>
 </html>
