@@ -104,6 +104,7 @@ function showMemberList(list) {
     bioP.appendChild(document.createTextNode(m.bio));
     sec.appendChild(bioP);
     
+    //show a modal with all member's information with black overlay backdrop
     sec.onclick = function() {
 
         let popup = document.getElementById('popup');
