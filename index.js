@@ -88,20 +88,38 @@ function showMemberList(list) {
     
     let p = document.createElement('p');
     p.style.color = "#2D89E6";
+    p.style.marginTop = "10px";
     p.appendChild(document.createTextNode(m.email+" / "+m.major+" / "+m.role));
     sec.appendChild(p);
     
     let bioP = document.createElement('p');
     bioP.style.color = "#6A6A6A";
-    bioP.style.marginLeft = "43px";
+    bioP.style.marginLeft = "48px";
     bioP.style.height = "40px";
     bioP.style.lineHeight ="20px";
     bioP.style.maxHeight ="80px";
     bioP.style.wordBreak = "break-all";
     bioP.style.overflow = "hidden";
+    bioP.style.marginTop = "10px";
     bioP.appendChild(document.createTextNode(m.bio));
     sec.appendChild(bioP);
     
+    sec.onclick = function() {
+
+        let popup = document.getElementById('popup');
+        popup.style.visibility = "visible";
+        let name = document.getElementById('member-name');
+        name.appendChild(document.createTextNode(m.name));
+
+        let para1 = document.getElementById('member-info');
+        para1.appendChild(document.createTextNode(m.email+" / "+m.major+" / "+m.role));
+        
+        let bioPara = document.getElementById('member-bio');
+        bioPara.appendChild(document.createTextNode(m.bio));
+
+        document.getElementById('overlay').style.display = "block";
+
+    };
     list.appendChild(sec);
   })
 
@@ -176,5 +194,6 @@ function filter() {
     search(majorOption,roleOption,"major","role");
     showMemberList(filterdArray);
 }
+
 
 

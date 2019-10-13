@@ -1,10 +1,3 @@
-/*@function border-radius($top-left,$top-right,$bottom-left,$bottom-right)
-{
-    $border-bottom-left-radius: $bottom-left;
-    $border-bottom-right-radius: $bottom-right;
-    $border-top-left-radius: $top-left;
-    $border-top-right-radius: $top-right;
-}*/
 * {
   margin: 0;
   border: 0;
@@ -15,6 +8,10 @@
 
 body, html {
   height: 100%;
+}
+
+body {
+  overflow: hidden;
 }
 
 .header-container {
@@ -108,6 +105,23 @@ form {
   margin: 5px 15px 3px 15px;
   border-radius: 10px;
   border: solid 0.5px #C3C3C3;
+  padding-left: 20px;
+}
+
+.form-container textarea::-webkit-input-placeholder {
+  color: #C3C3C3;
+}
+
+.form-container textarea:-ms-input-placeholder {
+  color: #C3C3C3;
+}
+
+.form-container textarea::-ms-input-placeholder {
+  color: #C3C3C3;
+}
+
+.form-container textarea::placeholder {
+  color: #C3C3C3;
 }
 
 .form-container .adding-choice {
@@ -175,10 +189,7 @@ form {
 
 .member-list-container .bar .filter-bar li input, .member-list-container .bar .filter-bar li select {
   border: solid 0.5px #C3C3C3;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
 }
 
 .member-list-container .bar .filter-bar li #sort-alphabit {
@@ -202,20 +213,81 @@ form {
   padding-right: 90px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: #fff;
 }
 
-.member-list-container .info-popup {
-  display: none;
+.info-popup {
+  visibility: hidden;
+  width: 50%;
   position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
+  top: 25%;
+  left: 25%;
+  z-index: 100;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
 }
 
-.member-list-container .form {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
+.info-popup .form {
+  margin: 40px;
+}
+
+.info-popup .form .btns {
+  padding-top: 150px;
+  text-align: center;
+}
+
+#del-btn {
+  background-color: #FF4A4A;
+  padding: 10px 30px 10px 30px;
+}
+
+#save-btn {
+  background-color: #2D89E6;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 10px 30px 10px 30px;
+}
+
+#cancel-btn {
+  background-color: #484848;
+  padding: 10px 30px 10px 30px;
+}
+
+#member-name {
+  text-align: center;
+}
+
+#member-info {
+  margin-top: 20px;
+  text-align: center;
+  color: #2D89E6;
+}
+
+#member-bio {
+  text-align: center;
+  word-break: break-all;
+  margin-top: 20px;
+  color: #6A6A6A;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 /*# sourceMappingURL=index.css.map */
