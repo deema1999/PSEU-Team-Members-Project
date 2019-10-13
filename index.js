@@ -75,7 +75,10 @@ function showMemberList(list) {
     deleteBtn.style.color ="#fff";
     deleteBtn.style.fontSize ="35px";
     deleteBtn.appendChild(document.createTextNode("-"));
-    deleteBtn.onclick = "deleteMember()";
+    deleteBtn.id = "delBtn";
+    deleteBtn.onclick = function () {
+        this.parentElement.remove(this);
+    };
     sec.appendChild(deleteBtn);
 
     let nameH = document.createElement('H2'); 
