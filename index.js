@@ -1,6 +1,7 @@
-let members=[];  
+let members = [];  
 let chechBtn;
 let filterdArray;
+let shownMembersNo = 0;
 
 function Member(name,email,major,role,bio) {
 
@@ -42,6 +43,7 @@ function addMember(){
     else if(chechBtn != checked && index == null) {
         members.unshift(newMember);
     }
+
 }
 
 function saveFunction() {
@@ -99,6 +101,9 @@ function showMemberList(list) {
     
     list.appendChild(sec);
   })
+
+  shownMembersNo = list.length;
+  document.getElementById('item-counter').innerHTML = shownMembersNo + " ITEMS";
 
 }
 
@@ -164,7 +169,7 @@ function filter() {
     let item1 = document.getElementById('filter-by-major');
     let majorOption = item1.options[item1.selectedIndex].value;
     let item2 = document.getElementById('filter-by-role');
-    let roleOption = item2.options[item2.selectedIndex].value;console.log(option1);
+    let roleOption = item2.options[item2.selectedIndex].value;
     search(majorOption,roleOption,"major","role");
     showMemberList(filterdArray);
 }

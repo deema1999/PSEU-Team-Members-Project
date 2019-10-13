@@ -54,7 +54,7 @@
                             </li>
                             <li id="splitter">|</li>
                             <li>
-                                <select id="filter-by-major" onclick="filter()">
+                                <select id="filter-by-major" onclick="filter()" onclick="filterByMajor()">
                                     <option value="Major" selected disabled value=" ">Major</option>
                                     <option value="Computer Science">Computer Science</option>
                                     <option value="Computer Engineering">Computer Engineering</option>
@@ -75,7 +75,7 @@
                             <li><input id="search-name" type="text" placeholder="Search by name ..   " name="search-by-name"></li>
                         </ul>
                     </div>
-                    <div class="item-counter"></div>
+                    <div class="item-counter" id="item-counter"></div>
                 </nav>
                 <div id="list" class="list"></div>
             </div>
