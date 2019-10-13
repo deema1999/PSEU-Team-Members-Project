@@ -129,7 +129,7 @@ function compareValues(key, order='asc') {
       );
     };
 }
- //sort members array by alphabetical order, ascending and descending based on user choice
+//sort members array by alphabetical order, ascending and descending based on user choice
 function sortByAlpha(){
 
     let item = document.getElementById('sort-by-alphabit');
@@ -145,6 +145,28 @@ function sortByAlpha(){
         showMemberList(members);
     }
     
+}
+//search through members and push choosen ones to new array 
+function search(majorOption,roleOption,major,role) {
+
+    filterdArray = [];
+    members.forEach(function(m) { 
+        if (m[major] === majorOption && m[role] === roleOption) {
+            filterdArray.push(m);
+        }
+    })
+return filterdArray;
+}
+
+//filter members based on thier roles and majors selected by the user 
+function filter() {
+
+    let item1 = document.getElementById('filter-by-major');
+    let majorOption = item1.options[item1.selectedIndex].value;
+    let item2 = document.getElementById('filter-by-role');
+    let roleOption = item2.options[item2.selectedIndex].value;console.log(option1);
+    search(majorOption,roleOption,"major","role");
+    showMemberList(filterdArray);
 }
 
 
