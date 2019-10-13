@@ -102,7 +102,7 @@ function showMemberList(list) {
 
 }
 
-//check adding member to botom option
+//check adding member to bottom option
 function checkAddOption() {
 
    if (document.getElementById('add-bottom').checked) 
@@ -110,6 +110,41 @@ function checkAddOption() {
             chechBtn = "checked";
         }
 }
+// compare two values 
+function compareValues(key, order='asc') {
 
+    return function(a, b) {
+
+      const varA = a[key].toUpperCase();
+      const varB = b[key].toUpperCase();
+  
+      let comparison = 0;
+      if (varA > varB) {
+        comparison = 1;
+      } else if (varA < varB) {
+        comparison = -1;
+      }
+      return (
+        (order == 'desc') ? (comparison * -1) : comparison
+      );
+    };
+}
+ //sort members array by alphabetical order, ascending and descending based on user choice
+function sortByAlpha(){
+
+    let item = document.getElementById('sort-by-alphabit');
+    let option = item.options[item.selectedIndex].value;
+   
+    if(option == "A-Z")
+    {
+        members.sort(compareValues('name'));  
+        showMemberList(members);
+    }
+    else if(option == "Z-A") {
+        members.sort(compareValues('name','desc'));
+        showMemberList(members);
+    }
+    
+}
 
 
