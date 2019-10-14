@@ -214,6 +214,11 @@ form {
   padding-top: 10px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+<<<<<<< HEAD
+=======
+  -ms-flex-line-pack: center;
+      align-content: center;
+>>>>>>> 47eb49707fe4ff98c0e845f6c5fcc7f5b8c2079b
   color: #fff;
 }
 
@@ -288,9 +293,12 @@ form {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
+<<<<<<< HEAD
 }
 
 #items {
   margin-right: 20px;
+=======
+>>>>>>> 47eb49707fe4ff98c0e845f6c5fcc7f5b8c2079b
 }
 /*# sourceMappingURL=index.css.map */
