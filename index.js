@@ -219,5 +219,16 @@ function filter() {
     showMemberList(filterdArray);
 }
 
-
+let filterdArrayByName;
+function filterByName() {
+    let inputName = document.getElementById('search-name');
+    let name = inputName.value;
+    let result = members.find(member => {
+        return member.name == name;
+      })
+    
+    filterdArrayByName =[];
+    filterdArrayByName.push(result);
+    showMemberList(filterdArrayByName);
+}
 
