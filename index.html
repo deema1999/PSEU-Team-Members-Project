@@ -30,11 +30,7 @@
                         <option value="Full-Stack Developer">Full-Stack Developer</option>
                         <option value="UI/UX Designer">UI/UX Designer</option>
                     </select>
-<<<<<<< HEAD
                     <textarea  placeholder="Biography" id="bio" rows="15" cols="35" minlength="100" maxlength="1500"></textarea>
-=======
-                    <textarea  placeholder="Biography" id="bio" rows="15" cols="35" minlength="500" maxlength="1500"></textarea>
->>>>>>> 47eb49707fe4ff98c0e845f6c5fcc7f5b8c2079b
                     <div class="adding-choice">
                         <input type="checkbox" id="add-bottom" name="add-to-bottom" value="bottom" onclick="checkAddOption()"><span>Add to bottom / or at indexs</span>
                         <input type="text" id="index-input" name="add-at-index">
@@ -48,11 +44,7 @@
                         <ul>
                             <li id="sort-by">SORT BY</li>
                             <li>
-<<<<<<< HEAD
                                 <select id="sort-by-alphabit" onchange="sortByAlpha()">
-=======
-                                <select id="sort-by-alphabit" onclick="sortByAlpha()">
->>>>>>> 47eb49707fe4ff98c0e845f6c5fcc7f5b8c2079b
                                     <option value="A-Z" selected disabled value=" ">A-Z</option>
                                     <option value="A-Z">A-Z</option>
                                     <option value="Z-A">Z-A</option>
@@ -62,11 +54,7 @@
                             </li>
                             <li id="splitter">|</li>
                             <li>
-<<<<<<< HEAD
                                 <select id="filter-by-major" onchange="filterByMajor()" onchange="filter()">
-=======
-                                <select id="filter-by-major" onclick="filter()" onclick="filterByMajor()">
->>>>>>> 47eb49707fe4ff98c0e845f6c5fcc7f5b8c2079b
                                     <option value="Major" selected disabled value=" ">Major</option>
                                     <option value="Computer Science">Computer Science</option>
                                     <option value="Computer Engineering">Computer Engineering</option>
@@ -75,11 +63,7 @@
                                 </select>
                             </li>
                             <li>
-<<<<<<< HEAD
                                 <select id="filter-by-role" onchange="filterByRole()" onchange="filter()">
-=======
-                                <select id="filter-by-role" onclick="filter()">
->>>>>>> 47eb49707fe4ff98c0e845f6c5fcc7f5b8c2079b
                                     <option value="Role" selected disabled value=" ">Role</option>
                                     <option value="Front-End Developer">Front-End Developer</option>
                                     <option value="Back-End Developer">Back-End Developer</option>
@@ -88,21 +72,16 @@
                                 </select>
                             </li>
                             <li id="splitter">|</li>
-                            <li><input id="search-name" type="text" placeholder="Search by name ..   " name="search-by-name"></li>
+                            <li><input id="search-name" type="text" placeholder="Search by name ..   " name="search-by-name" onkeypress="filterByName()"></li>
                         </ul>
                     </div>
-<<<<<<< HEAD
                     <div class="item-counter" id="item-counter"><span id="items"></span></div>
-=======
-                    <div class="item-counter" id="item-counter"></div>
->>>>>>> 47eb49707fe4ff98c0e845f6c5fcc7f5b8c2079b
                 </nav>
                 <div id="list" class="list"></div>
             </div>
         </div>
         <div class="info-popup" id="popup"> 
             <form class="form">
-<<<<<<< HEAD
                 <h1 id = "member-name" contenteditable="true"></h1>
                 <p id="member-info" contenteditable="true"></p>
                 <p id="member-bio" contenteditable="true"></p>
@@ -110,15 +89,6 @@
                     <button id="del-btn">DELETE</button>
                     <button id="save-btn">SAVE</button>
                     <button id="cancel-btn">CANCEL</button>
-=======
-                <h1 id = "member-name"></h1>
-                <p id="member-info"></p>
-                <p id="member-bio"></p>
-                <div class="btns"> 
-                    <button id="del-btn">DELETE</button>
-                    <button id="save-btn">SAVE</button>
-                    <button id="cancel-btn">CANSEL</button>
->>>>>>> 47eb49707fe4ff98c0e845f6c5fcc7f5b8c2079b
                 </div>
             </form>
         </div>
