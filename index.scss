@@ -1,5 +1,6 @@
 $light-gray: #C3C3C3;
 $blue: #2D89E6;
+$font : "Segoe UI";
 
 * {
     margin: 0;
@@ -20,8 +21,9 @@ body {
     width: 100%;
     height:70px;
     background-color: $blue;
+
     .header h1 {
-        font-family: Segoe UI;
+        font-family: $font;
         font-size: 22px;
         color: #fff;
         display: flex;
@@ -54,7 +56,7 @@ form {
     h1 {
         display: flex;
         justify-content: center;
-        font-family: Segoe UI;
+        font-family: $font;
         font-size: 15px;
         color: #707070;
         padding-bottom: 15px;
@@ -66,10 +68,12 @@ form {
         border: solid 0.5px $light-gray;
         border-radius: 8px;
         background-color: #fff;
-        
     }
 
     input::placeholder {
+        color: $light-gray; 
+    }
+    select::placeholder {
         color: $light-gray; 
     }
     
@@ -93,7 +97,6 @@ form {
                 font-size: 10px;
                 font-family: Arial;
                 color: #686767;
-                
             }
             
             #index-input {
@@ -109,7 +112,7 @@ form {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     padding: 15px;
-    font-family: Segoe UI;
+    font-family: $font;
     font-size: 15px;
     color: white;
     }
@@ -127,7 +130,7 @@ form {
         margin-top: 30px;
         height: 70px;
         padding-top: 30px;
-        font-family: Segoe UI;
+        font-family: $font;
         
         .filter-bar {
             background-color: $blue;
@@ -146,19 +149,20 @@ form {
                 input,select {
                     border: solid 0.5px $light-gray;
                     border-radius: 5px;
-                    
                 }
+
                  #sort-alphabit {
                     width: 40px;
-                       
                 }
+
                 #sort-major {
                     width: 70px;
-                   
                 }
+
                 #sort-role {
                     width: 70px;
                 }
+
                 #search-name {
                     width: 180px;
                 }
@@ -174,7 +178,6 @@ form {
             border-bottom-left-radius: 20px;
             //align-content: center;
             color: #fff;
-            
         }
        
     }
@@ -183,55 +186,83 @@ form {
  .info-popup {
 
         visibility: hidden;
-        width:50%;
-        position:fixed;
-        top:25%;
-        left:25%;
-        z-index:100;
-        background-color:white;
+        width: 70%;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        bottom: 20%;
+        right: 20%;
+        z-index: 100;
+        background-color: white;
         display: flex;
         justify-content: center;
         border-radius: 30px;
-
+        
        .form {
             margin : 40px;
-            .btns {
-                padding-top : 150px;
-                text-align: center;
+            height: 100%;
+            span {
+                color: #2D89E6;
             }
         }
-    }
+        .list {
+            border: solid 0.5px $light-gray;
+            border-radius: 5px;
+            color: #2D89E6;
+            font-family: $font;
+            font-weight: bold;
+            font-size: 10px;
+        }
+        .btns {
+            position: absolute;
+            bottom: 50px;font-family: $font;
+        }
+    } 
+    
     #del-btn {
         background-color: #FF4A4A;
         padding: 10px 30px 10px 30px;
-       
+        color: #fff;
     }
     #save-btn {
         background-color: $blue;
         margin-right: 20px;
         margin-left: 20px;
-        padding: 10px 30px 10px 30px;
-       
+        padding: 10px 40px 10px 40px;
+        color: #fff;
     }
+
     #cancel-btn {
         background-color: #484848;
         padding: 10px 30px 10px 30px;
-       
+        color: #fff;
     }
+
     #member-name {
         text-align: center;
+        font-family: $font;
+        font-size: 50px;
+        font-weight: bold;
     }
+
     #member-info {
-        margin-top: 20px;
         text-align: center;
-        color: #2D89E6;
+        margin-top: 20px;
+        font-family: $font;
     }
+    #email-info {
+        font-size: 10px;
+        font-weight: bold;
+    }
+
     #member-bio {
         text-align: center;
         word-break: break-all;
         margin-top: 20px;
         color: #6A6A6A;
+        font-family: $font;
     }
+
     #overlay {
         position: fixed;
         display: none;
@@ -246,5 +277,4 @@ form {
     }
     #items {
         margin-right: 20px;
-        
     }

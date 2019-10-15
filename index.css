@@ -21,7 +21,7 @@ body {
 }
 
 .header-container .header h1 {
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 22px;
   color: #fff;
   display: -webkit-box;
@@ -70,7 +70,7 @@ form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 15px;
   color: #707070;
   padding-bottom: 15px;
@@ -97,6 +97,22 @@ form {
 }
 
 .form-container input::placeholder {
+  color: #C3C3C3;
+}
+
+.form-container select::-webkit-input-placeholder {
+  color: #C3C3C3;
+}
+
+.form-container select:-ms-input-placeholder {
+  color: #C3C3C3;
+}
+
+.form-container select::-ms-input-placeholder {
+  color: #C3C3C3;
+}
+
+.form-container select::placeholder {
   color: #C3C3C3;
 }
 
@@ -147,7 +163,7 @@ form {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   padding: 15px;
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 15px;
   color: white;
 }
@@ -169,7 +185,7 @@ form {
   margin-top: 30px;
   height: 70px;
   padding-top: 30px;
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
 }
 
 .member-list-container .bar .filter-bar {
@@ -214,20 +230,17 @@ form {
   padding-top: 10px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-<<<<<<< HEAD
-=======
-  -ms-flex-line-pack: center;
-      align-content: center;
->>>>>>> 47eb49707fe4ff98c0e845f6c5fcc7f5b8c2079b
   color: #fff;
 }
 
 .info-popup {
   visibility: hidden;
-  width: 50%;
-  position: fixed;
-  top: 25%;
-  left: 25%;
+  width: 70%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  bottom: 20%;
+  right: 20%;
   z-index: 100;
   background-color: white;
   display: -webkit-box;
@@ -241,38 +254,64 @@ form {
 
 .info-popup .form {
   margin: 40px;
+  height: 100%;
 }
 
-.info-popup .form .btns {
-  padding-top: 150px;
-  text-align: center;
+.info-popup .form span {
+  color: #2D89E6;
+}
+
+.info-popup .list {
+  border: solid 0.5px #C3C3C3;
+  border-radius: 5px;
+  color: #2D89E6;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.info-popup .btns {
+  position: absolute;
+  bottom: 50px;
+  font-family: "Segoe UI";
 }
 
 #del-btn {
   background-color: #FF4A4A;
   padding: 10px 30px 10px 30px;
+  color: #fff;
 }
 
 #save-btn {
   background-color: #2D89E6;
   margin-right: 20px;
   margin-left: 20px;
-  padding: 10px 30px 10px 30px;
+  padding: 10px 40px 10px 40px;
+  color: #fff;
 }
 
 #cancel-btn {
   background-color: #484848;
   padding: 10px 30px 10px 30px;
+  color: #fff;
 }
 
 #member-name {
   text-align: center;
+  font-family: "Segoe UI";
+  font-size: 50px;
+  font-weight: bold;
 }
 
 #member-info {
-  margin-top: 20px;
   text-align: center;
-  color: #2D89E6;
+  margin-top: 20px;
+  font-family: "Segoe UI";
+}
+
+#email-info {
+  font-size: 10px;
+  font-weight: bold;
 }
 
 #member-bio {
@@ -280,6 +319,7 @@ form {
   word-break: break-all;
   margin-top: 20px;
   color: #6A6A6A;
+  font-family: "Segoe UI";
 }
 
 #overlay {
@@ -293,12 +333,9 @@ form {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
-<<<<<<< HEAD
 }
 
 #items {
   margin-right: 20px;
-=======
->>>>>>> 47eb49707fe4ff98c0e845f6c5fcc7f5b8c2079b
 }
 /*# sourceMappingURL=index.css.map */
