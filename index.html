@@ -88,14 +88,34 @@
     <div class="info-popup" id="popup">
         <form class="form">
             <h1 id="member-name" contenteditable="true"></h1>
-            <p id="member-info" contenteditable="true"></p>
-            <p id="member-bio" contenteditable="true"></p>
-            <div class="btns">
-                <button id="del-btn">DELETE</button>
-                <button id="save-btn">SAVE</button>
-                <button id="cancel-btn">CANCEL</button>
+            <div id="member-info">
+                <span id="email-info" contenteditable="true"></span>
+                <span>/</span>
+                <span>
+                    <select id="major-info" class="list">
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Information System">Information System</option>
+                    </select>
+                </span>
+                <span>/</span>
+                <span>
+                    <select id="role-info" class="list">
+                        <option value="Front-End Developer">Front-End Developer</option>
+                        <option value="Back-End Developer">Back-End Developer</option>
+                        <option value="Full-Stack Developer">Full-Stack Developer</option>
+                        <option value="UI/UX Designer">UI/UX Designer</option>
+                    </select>
+                </span>
             </div>
+            <p id="member-bio" contenteditable="true"></p>
         </form>
+        <div class="btns">
+            <button id="del-btn" type="button">DELETE</button>
+            <button id="save-btn" type="button">SAVE</button>
+            <button id="cancel-btn" type="button">CANCEL</button>
+        </div>
     </div>
     <div id="overlay"></div>
 </body>
