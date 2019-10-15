@@ -38,7 +38,7 @@ function addMember(){
     }
     else if(index != null)
     {
-        members.splice(index, 0, newMember);
+        members.splice(index-1, 0, newMember);
     }
     else if(chechBtn != checked && index == null) {
         members.unshift(newMember);
@@ -112,7 +112,7 @@ function showMemberList(list) {
 
     //show a modal with all member's information with black overlay backdrop
     nameH.onclick = function() {
-
+        
         let popup = document.getElementById('popup');
         document.getElementById('overlay').style.display = "block";
         popup.style.visibility = "visible";
@@ -121,13 +121,49 @@ function showMemberList(list) {
         let name = document.getElementById('member-name');
         name.appendChild(document.createTextNode(m.name));
        
+        let emailInfo = document.getElementById('email-info');
+        let majorInfo = document.getElementById('major-info');
+        let roleInfo = document.getElementById('role-info');
+        emailInfo.appendChild(document.createTextNode(m.email));
+        majorInfo.options[0].text = m.major;
+        roleInfo.options[0].text = m.role;
+        emailInfo.style.color = "#2D89E6";
 
-        let para1 = document.getElementById('member-info');
-        
-        para1.appendChild(document.createTextNode(m.email+" / "+m.major+" / "+m.role));
-        
         let bioPara = document.getElementById('member-bio');
         bioPara.appendChild(document.createTextNode(m.bio));
+
+        let deleteMemBtn = document.getElementById('del-btn');
+        deleteMemBtn.onclick = function () {
+
+            members.splice(index,1);
+            jsonMembers = JSON.stringify(members);
+            localStorage.setItem('members-array', jsonMembers);
+            showMemberList(members);
+    
+        };
+        let saveMemInfoBtn = document.getElementById('save-btn');
+        saveMemInfoBtn.onclick = function () {
+    
+            m.name = name.innerHTML;
+            m.email = emailInfo.innerHTML;
+            m.bio = bioPara.innerHTML;
+            m.major = majorInfo.options[majorInfo.selectedIndex].value;
+            m.role = roleInfo.options[roleInfo.selectedIndex].value;
+            jsonMembers = JSON.stringify(members);
+            localStorage.setItem('members-array', jsonMembers);
+            showMemberList(members);
+    
+        };
+        let canclelBtn = document.getElementById('cancel-btn');
+        canclelBtn.onclick = function () {
+           
+            popup.style.visibility = "hidden";
+            document.getElementById('overlay').style.display = "none"; 
+            name.innerHTML = "";
+            emailInfo.innerHTML="";
+            bioPara.innerHTML="";
+
+        };  
 
     };
     list.appendChild(sec);
@@ -183,11 +219,11 @@ function sortByAlpha(){
 }
 
 function filter() {
+
     filterdArray = members;
     let majorOption = document.getElementById('filter-by-major').value;
     let roleOption = document.getElementById('filter-by-role').value;
     let sortOption = document.getElementById('sort-by-alphabit');
-    let input = document.getElementById('search-name');
     let inputName = document.getElementById('search-name').value;
 
     if(majorOption != "Major") {
@@ -205,9 +241,7 @@ function filter() {
     if(inputName != undefined) {
         
         filterdArray = filterdArray.filter(obj => {return obj.name.toLowerCase().includes(inputName.toLowerCase())});
-        console.log(filterdArray);
     }
     showMemberList(filterdArray);
 }
-
 
