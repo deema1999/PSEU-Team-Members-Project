@@ -43,7 +43,7 @@ function addMember(){
     else if(chechBtn != checked && index == null) {
         members.unshift(newMember);
     }
-
+   
 }
 
 function saveFunction() {
@@ -51,7 +51,7 @@ function saveFunction() {
     addMember();
     let jsonMembers = JSON.stringify(members);
     localStorage.setItem('members-array', jsonMembers);
-    
+
 } 
 
 function showMemberList(list) {
@@ -168,67 +168,46 @@ function compareValues(key, order='asc') {
 //sort members array by alphabetical order, ascending and descending based on user choice
 function sortByAlpha(){
 
-    let item = document.getElementById('sort-by-alphabit');
-    let option = item.options[item.selectedIndex].value;
-   
-    if(option == "A-Z")
-    {
-        members.sort(compareValues('name'));  
-        showMemberList(members);
+    let sortOption = document.getElementById('sort-by-alphabit').value;
+
+    if(sortOption == "A-Z") {
+
+        filterdArray.sort(compareValues('name'));  
     }
-    else if(option == "Z-A") {
-        members.sort(compareValues('name','desc'));
-        showMemberList(members);
+    else if(sortOption == "Z-A") {
+
+        filterdArray.sort(compareValues('name','desc'));
+        
     }
     
 }
 
-function search(option,name) {
-
-    filterdArray = [];
-    members.forEach(function(m) { 
-        if (m[name] === option) {
-            filterdArray.push(m);
-        }
-    })
-return filterdArray;
-}
-
-//filter members based on thier roles and majors selected by the user 
-function filterByMajor() {
-
-    let item1 = document.getElementById('filter-by-major');
-    let majorOption = item1.options[item1.selectedIndex].value;
-
-    search(majorOption,"major");
-    showMemberList(filterdArray);
-}
-
-function filterByRole() {
-
-    let item1 = document.getElementById('filter-by-role');
-    let roleOption = item1.options[item1.selectedIndex].value;
-
-    search(roleOption,"role");
-    showMemberList(filterdArray);
-}
 function filter() {
+    filterdArray = members;
+    let majorOption = document.getElementById('filter-by-major').value;
+    let roleOption = document.getElementById('filter-by-role').value;
+    let sortOption = document.getElementById('sort-by-alphabit');
+    let input = document.getElementById('search-name');
+    let inputName = document.getElementById('search-name').value;
 
-    filterByMajor();
-    filterByRole();
+    if(majorOption != "Major") {
+    
+        filterdArray = filterdArray.filter(obj => { return obj.major == majorOption});
+    }
+    if(roleOption != "Role") {
+    
+        filterdArray = filterdArray.filter(obj => { return obj.role == roleOption});
+    }
+    if(sortOption != 'A-Z') {
+    
+        sortByAlpha();
+    }
+    if(inputName != undefined) {
+        
+        filterdArray = filterdArray.filter(obj => {return obj.name.toLowerCase().includes(inputName.toLowerCase())});
+        console.log(filterdArray);
+    }
     showMemberList(filterdArray);
 }
 
-let filterdArrayByName;
-function filterByName() {
-    let inputName = document.getElementById('search-name');
-    let name = inputName.value;
-    let result = members.find(member => {
-        return member.name == name;
-      })
-    
-    filterdArrayByName =[];
-    filterdArrayByName.push(result);
-    showMemberList(filterdArrayByName);
-}
 

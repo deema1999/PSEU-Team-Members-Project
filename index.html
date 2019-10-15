@@ -1,97 +1,103 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="index.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-        <script src="index.js"></script>
-        <div class="header-container">
-            <div class="header">
-                <h1>PSEU Team Members</h1>
-            </div>
+
+<head>
+    <link href="index.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="index.js"></script>
+    <div class="header-container">
+        <div class="header">
+            <h1>PSEU Team Members</h1>
         </div>
-        <div class="main-content">
-            <form>
-                <div class="form-container">
-                    <h1>Add new member</h1>
-                    <input type="text" placeholder="Name" id="name" required>
-                    <input type="text" placeholder="Email" id="email" required>
-                    <select id="major-list">
-                        <option value="Major" selected disabled value=" ">Major</option>
-                        <option value="Computer Science">Computer Science</option>
-                        <option value="Computer Engineering">Computer Engineering</option>
-                        <option value="Information Technology">Information Technology</option>
-                        <option value="Information System">Information System</option>
-                    </select>
-                    <select id="role-list">
-                        <option value="Role" selected disabled value=" ">Role</option>
-                        <option value="Front-End Developer">Front-End Developer</option>
-                        <option value="Back-End Developer">Back-End Developer</option>
-                        <option value="Full-Stack Developer">Full-Stack Developer</option>
-                        <option value="UI/UX Designer">UI/UX Designer</option>
-                    </select>
-                    <textarea  placeholder="Biography" id="bio" rows="15" cols="35" minlength="100" maxlength="1500"></textarea>
-                    <div class="adding-choice">
-                        <input type="checkbox" id="add-bottom" name="add-to-bottom" value="bottom" onclick="checkAddOption()"><span>Add to bottom / or at indexs</span>
-                        <input type="text" id="index-input" name="add-at-index">
-                    </div>
-                     <button type="submit" class="save-btn" onclick="saveFunction()"><b>SAVE</b></button>
+    </div>
+    <div class="main-content">
+        <form>
+            <div class="form-container">
+                <h1>Add new member</h1>
+                <input type="text" placeholder="Name" id="name" required>
+                <input type="text" placeholder="Email" id="email" required>
+                <select id="major-list">
+                    <option value="Major" selected disabled value=" ">Major</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Computer Engineering">Computer Engineering</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Information System">Information System</option>
+                </select>
+                <select id="role-list">
+                    <option value="Role" selected disabled value=" ">Role</option>
+                    <option value="Front-End Developer">Front-End Developer</option>
+                    <option value="Back-End Developer">Back-End Developer</option>
+                    <option value="Full-Stack Developer">Full-Stack Developer</option>
+                    <option value="UI/UX Designer">UI/UX Designer</option>
+                </select>
+                <textarea placeholder="Biography" id="bio" rows="15" cols="35" minlength="100"
+                    maxlength="1500"></textarea>
+                <div class="adding-choice">
+                    <input type="checkbox" id="add-bottom" name="add-to-bottom" value="bottom"
+                        onclick="checkAddOption()"><span>Add to bottom / or at indexs</span>
+                    <input type="text" id="index-input" name="add-at-index">
                 </div>
-            </form>
-            <div class="member-list-container">
-                <nav class="bar">
-                    <div class="filter-bar"> 
-                        <ul>
-                            <li id="sort-by">SORT BY</li>
-                            <li>
-                                <select id="sort-by-alphabit" onchange="sortByAlpha()">
-                                    <option value="A-Z" selected disabled value=" ">A-Z</option>
-                                    <option value="A-Z">A-Z</option>
-                                    <option value="Z-A">Z-A</option>
-                                    <option value="Newest">Newest</option>
-                                    <option value="Oldest">Oldest</option>
-                                </select>
-                            </li>
-                            <li id="splitter">|</li>
-                            <li>
-                                <select id="filter-by-major" onchange="filterByMajor()" onchange="filter()">
-                                    <option value="Major" selected disabled value=" ">Major</option>
-                                    <option value="Computer Science">Computer Science</option>
-                                    <option value="Computer Engineering">Computer Engineering</option>
-                                    <option value="Information Technology">Information Technology</option>
-                                    <option value="Information System">Information System</option>
-                                </select>
-                            </li>
-                            <li>
-                                <select id="filter-by-role" onchange="filterByRole()" onchange="filter()">
-                                    <option value="Role" selected disabled value=" ">Role</option>
-                                    <option value="Front-End Developer">Front-End Developer</option>
-                                    <option value="Back-End Developer">Back-End Developer</option>
-                                    <option value="Full-Stack Developer">Full-Stack Developer</option>
-                                    <option value="UI/UX Designer">UI/UX Designer</option>
-                                </select>
-                            </li>
-                            <li id="splitter">|</li>
-                            <li><input id="search-name" type="text" placeholder="Search by name ..   " name="search-by-name" onkeypress="filterByName()"></li>
-                        </ul>
-                    </div>
-                    <div class="item-counter" id="item-counter"><span id="items"></span></div>
-                </nav>
-                <div id="list" class="list"></div>
+                <button type="submit" class="save-btn" onclick="saveFunction()"><b>SAVE</b></button>
             </div>
-        </div>
-        <div class="info-popup" id="popup"> 
-            <form class="form">
-                <h1 id = "member-name" contenteditable="true"></h1>
-                <p id="member-info" contenteditable="true"></p>
-                <p id="member-bio" contenteditable="true"></p>
-                <div class="btns"> 
-                    <button id="del-btn">DELETE</button>
-                    <button id="save-btn">SAVE</button>
-                    <button id="cancel-btn">CANCEL</button>
+        </form>
+        <div class="member-list-container">
+            <nav class="bar">
+                <div class="filter-bar">
+                    <ul>
+                        <li id="sort-by">SORT BY</li>
+                        <li>
+                            <select id="sort-by-alphabit" onchange="filter()">
+                                <option value="A-Z" selected disabled value=" ">A-Z</option>
+                                <option value="A-Z">A-Z</option>
+                                <option value="Z-A">Z-A</option>
+                                <option value="Newest">Newest</option>
+                                <option value="Oldest">Oldest</option>
+                            </select>
+                        </li>
+                        <li id="splitter">|</li>
+                        <li>
+                            <select id="filter-by-major" onchange="filter()">
+                                <option value="Major" selected disabled value=" ">Major</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Computer Engineering">Computer Engineering</option>
+                                <option value="Information Technology">Information Technology</option>
+                                <option value="Information System">Information System</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select id="filter-by-role" onchange="filter()">
+                                <option value="Role" selected disabled value=" ">Role</option>
+                                <option value="Front-End Developer">Front-End Developer</option>
+                                <option value="Back-End Developer">Back-End Developer</option>
+                                <option value="Full-Stack Developer">Full-Stack Developer</option>
+                                <option value="UI/UX Designer">UI/UX Designer</option>
+                            </select>
+                        </li>
+                        <li id="splitter">|</li>
+                        <li><input id="search-name" type="text" placeholder="Search by name ..   " name="search-by-name"
+                                onkeypress="filter()"></li>
+                    </ul>
                 </div>
-            </form>
+                <div class="item-counter" id="item-counter"><span id="items"></span></div>
+            </nav>
+            <div id="list" class="list"></div>
         </div>
-        <div id="overlay"></div>
-    </body>
+    </div>
+    <div class="info-popup" id="popup">
+        <form class="form">
+            <h1 id="member-name" contenteditable="true"></h1>
+            <p id="member-info" contenteditable="true"></p>
+            <p id="member-bio" contenteditable="true"></p>
+            <div class="btns">
+                <button id="del-btn">DELETE</button>
+                <button id="save-btn">SAVE</button>
+                <button id="cancel-btn">CANCEL</button>
+            </div>
+        </form>
+    </div>
+    <div id="overlay"></div>
+</body>
+
 </html>
