@@ -1,4 +1,3 @@
-# PSEU-Team-Members-Project
 
 # PSEU Team Members Directory
 
