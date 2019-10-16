@@ -1,8 +1,8 @@
 # PSEU-Team-Members-Project
 
-#PSEU Team Members Directory
+# PSEU Team Members Directory
 
-*A simple app that allow users to add members and update the directory instantly. Users also can delete or update any member. 
+* A simple app that allow users to add members and update the directory instantly. Users also can delete or update any member. 
 
 ## Table of contents
 * [General info](#general-info)
