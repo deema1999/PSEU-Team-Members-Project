@@ -15,3 +15,6 @@ This application gives the ability to user to add a new member with his/her name
 Project is created with:
 * pure html and js.
 * css preprocessor (SASS)
+
+## Authors
+* Deema Hafez
